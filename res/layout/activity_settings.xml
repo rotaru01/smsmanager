@@ -6,15 +6,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".SettingsActivity" >
 
-     <ImageView
-        android:id="@+id/upgrade"
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignTop="@+id/manage_messages"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/about"
-        android:src="@drawable/upgrade" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="100dp"
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/settings"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@+id/upgrade"
+        android:src="@drawable/about" />
 
     <ImageView
         android:id="@+id/manage_messages"
@@ -26,30 +44,12 @@
         android:src="@drawable/messages" />
 
     <ImageView
-        android:id="@+id/settings"
+        android:id="@+id/upgrade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/manage_messages"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/settings" />
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/about"
+        android:src="@drawable/upgrade" />
 
-    <ImageView
-        android:id="@+id/about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/settings"
-        android:layout_marginRight="24dp"
-        android:layout_toLeftOf="@+id/upgrade"
-        android:background="@drawable/about"
-        />
-
-    <ImageView
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="100dp"
-        android:src="@drawable/add" />
 
 </RelativeLayout>

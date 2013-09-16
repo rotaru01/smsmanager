@@ -2,34 +2,70 @@ package com.example.smsmanager;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.Toast;
 
-public class MainActivity extends Activity {
+import android.widget.ImageView;
 
+
+	public class MainActivity extends Activity {
+
+	ImageView add;
+	ImageView messages;
+	ImageView settings;
+	ImageView about;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button buton = (Button)findViewById(R.id.button1);
-		buton.setOnClickListener(new OnClickListener(){
-
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this,"CANNA MEsaj Butonul merge:P",Toast.LENGTH_LONG).show();
-			}
+		
+		ImageView about = (ImageView) findViewById(R.id.about);
+		ImageView add = (ImageView) findViewById(R.id.add);
+		ImageView settings = (ImageView) findViewById(R.id.settings);
+		ImageView messages = (ImageView) findViewById(R.id.manage_messages);
+		
+		about.setOnClickListener(new OnClickListener() {
 			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, AboutActivity.class));
+				
+			}
 		});
-	}
+	
+	
+		add.setOnClickListener(new OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, AddContactActivity.class));
+			
+		}
+	});
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	
+		messages.setOnClickListener(new OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, MessagesActivity.class));
+		
 	}
+});
 
+	
+		settings.setOnClickListener(new OnClickListener() {
+		
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+		
+	}
+});
 }
+	
+}
+

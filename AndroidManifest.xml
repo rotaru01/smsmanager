@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.smsmanager.AddContactActivity"
+            android:label="@string/title_activity_add_contact" >
+        </activity>
+        <activity
+            android:name="com.example.smsmanager.MessagesActivity"
+            android:label="@string/title_activity_messages" >
+        </activity>
+        <activity
+            android:name="com.example.smsmanager.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.example.smsmanager.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>
