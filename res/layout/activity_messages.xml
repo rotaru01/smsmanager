@@ -52,4 +52,38 @@
         android:layout_marginBottom="100dp"
         android:src="@drawable/add" />
 
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upgrade"
+        android:layout_alignRight="@+id/upgrade"
+        android:layout_toRightOf="@+id/spinner1"
+        android:text="Send" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignLeft="@+id/add"
+        android:layout_alignRight="@+id/settings"
+        android:layout_below="@+id/editText1"
+        android:entries="@array/groups"
+        android:prompt="@string/prompt" />
+
 </RelativeLayout>
